@@ -1,0 +1,51 @@
+@use "header";
+@use "global";
+@use "footer";
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #333;
+	color: #fff;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+img {
+	width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+hr {
+	margin: 1rem 2rem;
+}
+
+h2 {
+	text-align: center;
+	margin: 2rem;
+	font-size: 3rem;
+}
+
+h3 {
+	margin: 1rem;
+}
+
+main {
+	padding: 3rem;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
