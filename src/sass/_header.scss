@@ -1,9 +1,13 @@
 nav {
 	display: flex;
-	flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: space-evenly;
     a {
         color: #fff;
         text-decoration: none;
+        text-transform: uppercase;
     }
     .active {
         color: red;

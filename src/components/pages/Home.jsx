@@ -1,5 +1,6 @@
 import { useEffect, useState, Fragment } from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const API_KEY = "884d52e7234bf6b25aeaf2b7eac5ad2a";
 const TOKEN =
@@ -14,6 +15,7 @@ const OPTIONS = {
 };
 
 function Home() {
+	useTitle("Home");
 	const [trendings, setTrendings] = useState(null);
 
 	useEffect(() => {
@@ -35,7 +37,6 @@ function Home() {
 
 	return (
 		<main id="home">
-            
 			<h2>Trendings movies of the week !</h2>
 
 			{!trendings ? (
@@ -43,7 +44,13 @@ function Home() {
 			) : (
 				trendings.map((trending) => (
 					<Fragment key={trending.id}>
-						<Link to={"media/" + trending.id + "/" + trending.media_type}>
+						<Link
+							to={
+								"media/" +
+								trending.id +
+								"/" +
+								trending.media_type
+							}>
 							<article>
 								<h3>
 									{trending.original_name || trending.title}
